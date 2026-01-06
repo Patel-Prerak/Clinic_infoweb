@@ -3,6 +3,10 @@ import { Layout } from '../components/Layout';
 import { FAQAccordion } from '../components/FAQAccordion';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Mail, ArrowRight } from 'lucide-react';
+import analyticsDashboard from '../assets/analytics_dashboard.png';
+import consultationEntry from '../assets/consultation_entry.png';
+import patientDirectory from '../assets/patient_directory.png';
+import prescription from '../assets/prescription.png';
 
 export const FAQPage: React.FC = () => {
   return (
@@ -10,10 +14,10 @@ export const FAQPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-white via-primary-50/20 to-white py-32 overflow-hidden">
         <div className="container mx-auto px-4 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary-100/30 blur-[120px] -z-10 rounded-full" />
-          <div className="text-center max-w-4xl mx-auto animate-in fade-in slide-in-from-top-10 duration-1000">
-            <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-8 tracking-tighter leading-none">
-              Help & <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic text-7xl">Support</span>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[150px] md:w-[800px] md:h-[300px] bg-primary-100/30 blur-[60px] md:blur-[120px] -z-10 rounded-full" />
+          <div className="text-center max-w-4xl mx-auto animate-in fade-in slide-in-from-top-10 duration-1000 px-4 md:px-0">
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-slate-900 mb-6 md:mb-8 tracking-tighter leading-none">
+              Help & <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic text-5xl md:text-7xl">Support</span>
             </h1>
             <p className="text-2xl text-slate-600 font-medium leading-relaxed">
               Find the architecture for your success. Everything you need to master <span className="text-primary-600 font-black">My Clinic</span>.
@@ -68,17 +72,17 @@ export const FAQPage: React.FC = () => {
       {/* Platform Mastery (Visual Overviews) */}
       <section className="py-32 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight italic text-primary-600">Platform Mastery</h2>
+          <div className="text-center mb-16 md:mb-24">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight italic text-primary-600">Platform Mastery</h2>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto font-medium">Visual intelligence for every corner of your clinical workflow.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {[
-              { title: 'Clinical Analytics Dashboard', image: '/src/assets/Screenshot 2026-01-06 003804.png', desc: 'Real-time telemetry and revenue tracking visualization.' },
-              { title: 'Intelligent Consultation Flow', image: '/src/assets/Screenshot 2026-01-06 003714.png', desc: 'Rapid data entry for symptoms and prescriptions.' },
-              { title: 'Enterprise Patient Directory', image: '/src/assets/Screenshot 2026-01-06 003727.png', desc: 'Scale-ready management for large-volume clinics.' },
-              { title: 'Prescription Architecture', image: '/src/assets/Screenshot 2026-01-06 003829.png', desc: 'Immutable receipts and medication records.' },
+              { title: 'Clinical Analytics Dashboard', image: analyticsDashboard, desc: 'Real-time telemetry and revenue tracking visualization.' },
+              { title: 'Intelligent Consultation Flow', image: consultationEntry, desc: 'Rapid data entry for symptoms and prescriptions.' },
+              { title: 'Enterprise Patient Directory', image: patientDirectory, desc: 'Scale-ready management for large-volume clinics.' },
+              { title: 'Prescription Architecture', image: prescription, desc: 'Immutable receipts and medication records.' },
             ].map((feature, idx) => (
               <div
                 key={idx}
@@ -144,7 +148,7 @@ export const FAQPage: React.FC = () => {
           <div className="bg-gradient-to-br from-primary-600 to-indigo-800 rounded-[4rem] p-20 text-center text-white shadow-3xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white opacity-5 rounded-full blur-[100px] -mr-48 -mt-48 group-hover:opacity-10 transition-all duration-1000" />
             <div className="relative z-10 max-w-4xl mx-auto">
-              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight italic underline underline-offset-8 decoration-primary-300">
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-black mb-6 md:mb-8 tracking-tighter leading-tight italic underline underline-offset-8 decoration-primary-300">
                 Still have Questions?
               </h2>
               <p className="text-2xl text-primary-50 mb-12 font-medium opacity-80 leading-relaxed">

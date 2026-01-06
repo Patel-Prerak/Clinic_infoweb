@@ -1,6 +1,8 @@
 import React from 'react';
 import { Users, Stethoscope, BarChart3, Download, Calendar, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import analyticsDashboard from '../assets/analytics_dashboard.png';
+import consultationEntry from '../assets/consultation_entry.png';
 
 interface Feature {
   icon: React.ComponentType<{ size: number; className: string }>;
@@ -50,11 +52,11 @@ const features: Feature[] = [
 
 export const FeaturesShowcase: React.FC = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-white via-indigo-50/30 to-white overflow-hidden">
+    <section className="py-16 md:py-32 bg-gradient-to-b from-white via-indigo-50/30 to-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-24 animate-in fade-in slide-in-from-top-6 duration-700">
-          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+        <div className="text-center mb-16 md:mb-24 animate-in fade-in slide-in-from-top-6 duration-700">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight">
             Engineered for <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic">Excellence</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
@@ -98,7 +100,7 @@ export const FeaturesShowcase: React.FC = () => {
           {/* Showcase 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8 animate-in fade-in slide-in-from-left-6 duration-1000">
-              <h3 className="text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
                 Intuitive <span className="text-primary-600 underline decoration-primary-200 underline-offset-8">Clinical Insights</span>
               </h3>
               <p className="text-lg text-slate-600 leading-relaxed font-medium">
@@ -118,7 +120,7 @@ export const FeaturesShowcase: React.FC = () => {
             <div className="relative group animate-in fade-in slide-in-from-right-6 duration-1000">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-600/10 to-indigo-600/10 rounded-[2.5rem] blur-2xl group-hover:opacity-100 transition duration-700"></div>
               <div className="relative bg-white p-3 rounded-[2.5rem] shadow-2xl border-2 border-slate-100 group-hover:scale-[1.02] transition-transform duration-500">
-                <img src="/src/assets/Screenshot 2026-01-06 003804.png" alt="Analytics Dashboard" className="rounded-[2rem] w-full" />
+                <img src={analyticsDashboard} alt="Analytics Dashboard" className="rounded-[2rem] w-full" />
               </div>
             </div>
           </div>
@@ -128,12 +130,12 @@ export const FeaturesShowcase: React.FC = () => {
             <div className="relative group order-2 lg:order-1 animate-in fade-in slide-in-from-left-6 duration-1000">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600/10 to-primary-600/10 rounded-[2.5rem] blur-2xl group-hover:opacity-100 transition duration-700"></div>
               <div className="relative bg-white p-3 rounded-[2.5rem] shadow-2xl border-2 border-slate-100 group-hover:scale-[1.02] transition-transform duration-500">
-                <img src="/src/assets/Screenshot 2026-01-06 003714.png" alt="Consultation Entry" className="rounded-[2rem] w-full" />
+                <img src={consultationEntry} alt="Consultation Entry" className="rounded-[2rem] w-full" />
               </div>
             </div>
             <div className="space-y-8 order-1 lg:order-2 animate-in fade-in slide-in-from-right-6 duration-1000 text-right">
-              <div className="flex justify-end">
-                <h3 className="text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              <div className="flex justify-start lg:justify-end">
+                <h3 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
                   Seamless <span className="text-indigo-600 underline decoration-indigo-200 underline-offset-8">Data Entry</span>
                 </h3>
               </div>
@@ -155,15 +157,15 @@ export const FeaturesShowcase: React.FC = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-32 text-center bg-slate-900 rounded-[3rem] p-16 relative overflow-hidden group shadow-3xl">
+        <div className="mt-20 md:mt-32 text-center bg-slate-900 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 relative overflow-hidden group shadow-3xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-primary-600/20 transition-all duration-1000" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl -ml-48 -mb-48 group-hover:bg-indigo-600/20 transition-all duration-1000" />
 
           <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">
+            <h3 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight">
               Ready to Upgrade <span className="text-primary-400 italic">Your Practice?</span>
             </h3>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <Link to="/pricing" className="px-12 py-5 bg-primary-600 text-white rounded-2xl font-black shadow-xl hover:shadow-primary-600/40 hover:bg-primary-500 transition-all hover:scale-105 active:scale-95">
                 Check Pricing
               </Link>

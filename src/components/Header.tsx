@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Spacer to push menu to right */}
-          <div className="flex-grow hidden lg:block"></div>
+          <div className="flex-grow"></div>
 
           {/* Core Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-1 bg-slate-100/50 p-1 rounded-2xl">

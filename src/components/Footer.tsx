@@ -81,8 +81,7 @@ export const Footer: React.FC = () => {
                   <MapPin size={14} className="text-primary-400 group-hover:text-white" />
                 </div>
                 <span className="text-slate-400 leading-relaxed">
-                  123 Medical Plaza, Sector 5<br />
-                  New Delhi, India 110001
+                  India Remote
                 </span>
               </li>
             </ul>
